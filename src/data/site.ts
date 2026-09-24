@@ -3,7 +3,7 @@ export type NavItem = { label: string; href: string; children?: NavChild[] };
 
 export const navigation: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Solutions", href: "/#solutions", children: [
+  { label: "Solutions", href: "/services", children: [
     { title: "Hydroseeding", description: "A modern, even way to plant grass on lawns, large areas and slopes.", href: "/services/hydroseeding" },
     { title: "Erosion control", description: "Protect exposed soil and slopes from damage caused by rain and runoff.", href: "/services/erosion-control" },
     { title: "Land rehabilitation", description: "Bring grass and other vegetation back to bare or damaged land.", href: "/services/land-rehabilitation" },

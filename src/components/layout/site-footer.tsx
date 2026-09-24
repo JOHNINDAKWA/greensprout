@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { footerGroups } from "@/data/site";
+import { ShareActions } from "@/components/ui/share-actions";
 
 export function SiteFooter() {
   const footerHref = (label: string) => {
@@ -36,7 +37,7 @@ export function SiteFooter() {
       <div className="page-shell footer-office">
         <div><span>Based in Kenya</span><p>Working across residential, commercial, institutional and public landscapes.</p></div>
         <div><span>Start a conversation</span><p>0700 355 113</p></div>
-        <div className="footer-social"><Link href="#" aria-label="LinkedIn">in</Link><Link href="#" aria-label="Instagram">ig</Link></div>
+        <ShareActions />
       </div>
       <div className="page-shell footer-legal">
         <p>© {new Date().getFullYear()} GreenSprout Hydroseeding. All rights reserved.</p>

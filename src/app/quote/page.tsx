@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -6,7 +7,7 @@ import { QuoteForm } from "@/components/quote/quote-form";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 
-export const metadata: Metadata = { title: "Get a quote", description: "Tell GreenSprout about your site and request a clear scope and quotation for consulting, hydroseeding or landscape work in Kenya." };
+export const metadata: Metadata = pageMetadata({ title: "Get a quote", description: "Tell GreenSprout about your site and request a clear scope and quotation for consulting, hydroseeding or landscape work in Kenya.", path: "/quote" });
 
 export default async function QuotePage({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
   const service = (await searchParams).service ?? "not-sure";

@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { photo } from "@/data/image-library";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -8,7 +9,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ButtonLink } from "@/components/ui/button-link";
 
-export const metadata: Metadata = { title: "Consulting", description: "GreenSprout consulting in Kenya: advice, site assessments, Bronze, Silver and Gold planning, project coordination and training." };
+export const metadata: Metadata = pageMetadata({ title: "Consulting", description: "GreenSprout consulting in Kenya: advice, site assessments, Bronze, Silver and Gold planning, project coordination and training.", path: "/consulting" });
 
 const pathways = [
   { number: "01", title: "Start with a conversation", price: "From KSh 5,000", copy: "A 30–45 minute call or online meeting to understand your site and point you in the right direction.", scope: "Early advice only; no site visit, technical report, specifications or bill of quantities.", href: "/quote?service=consultation" },

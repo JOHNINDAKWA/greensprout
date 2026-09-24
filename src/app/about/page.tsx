@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { photo } from "@/data/image-library";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
 
-export const metadata: Metadata = { title: "About GreenSprout", description: "Learn how GreenSprout helps clients establish grass, protect soil and improve land across Kenya." };
+export const metadata: Metadata = pageMetadata({ title: "About GreenSprout", description: "Learn how GreenSprout helps clients establish grass, protect soil and improve land across Kenya.", path: "/about" });
 
 export default function AboutPage() {
   return <><SiteHeader /><main>

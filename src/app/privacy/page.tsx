@@ -1,10 +1,11 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 
-export const metadata: Metadata = { title: "Privacy notice", description: "How GreenSprout handles information you share through this website and its contact links." };
+export const metadata: Metadata = pageMetadata({ title: "Privacy notice", description: "How GreenSprout handles information you share through this website and its contact links.", path: "/privacy" });
 
 export default function PrivacyPage() {
   return <><SiteHeader/><main>

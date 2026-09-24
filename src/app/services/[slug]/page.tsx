@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { getService, services } from "@/data/services";
 
 export function generateStaticParams() { return services.map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const service=getService((await params).slug); return service ? { title: service.name, description: service.short } : {}; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const service=getService((await params).slug); return service ? pageMetadata({ title: service.name, description: service.short, path: `/services/${service.slug}` }) : {}; }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const service=getService((await params).slug); if(!service) notFound();

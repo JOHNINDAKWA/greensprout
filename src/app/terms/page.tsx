@@ -1,10 +1,11 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 
-export const metadata: Metadata = { title: "Website terms", description: "Terms for using the GreenSprout website and requesting information about its services." };
+export const metadata: Metadata = pageMetadata({ title: "Website terms", description: "Terms for using the GreenSprout website and requesting information about its services.", path: "/terms" });
 
 export default function TermsPage() {
   return <><SiteHeader/><main>

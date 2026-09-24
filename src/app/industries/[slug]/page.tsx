@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { getService } from "@/data/services";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -11,7 +12,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { getIndustry, industries } from "@/data/industries";
 
 export function generateStaticParams() { return industries.map(({slug})=>({slug})); }
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const industry=getIndustry((await params).slug);return industry?{title:industry.name,description:industry.short}:{};}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const industry=getIndustry((await params).slug);return industry?pageMetadata({title:industry.name,description:industry.short,path:`/industries/${industry.slug}`}):{};}
 
 export default async function IndustryPage({params}:{params:Promise<{slug:string}>}) {
   const industry=getIndustry((await params).slug); if(!industry) notFound();
