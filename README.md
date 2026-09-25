@@ -1,4 +1,4 @@
-# GreenSprout Hydroseeding Website · Phase 10 Revised
+# GreenSprout Hydroseeding Website · Phase 11
 
 The responsive GreenSprout homepage, global navigation and footer, built with
 Next.js App Router, TypeScript and Tailwind CSS.
@@ -27,6 +27,12 @@ npm run lint
 npm run build
 npm start
 ```
+
+## Phase 11 includes
+
+- Navigation returns when scrolling up after the opening section (or one screen on long forms), and hides on the next downward scroll
+- Desktop and mobile behavior preserves the square action tiles and the tall quote tile
+- Reduced-motion preference respected for the header transition
 
 ## Phase 10 revision
 

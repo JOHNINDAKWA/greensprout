@@ -7,16 +7,66 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, FilePenLine, Leaf, Menu, X } from "lucide-react";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { navigation } from "@/data/site";
 
 export function SiteHeader() {
   const [activeDesktop, setActiveDesktop] = useState<string | null>(null);
   const [openMobile, setOpenMobile] = useState<string | null>(null);
+  const [scrollState, setScrollState] = useState<"top" | "hidden" | "visible">("top");
+
+  useEffect(() => {
+    let lastPosition = window.scrollY;
+    let frame = 0;
+
+    const updateHeader = () => {
+      frame = 0;
+      const position = Math.max(0, window.scrollY);
+
+      if (position <= 8) {
+        lastPosition = position;
+        setScrollState("top");
+        return;
+      }
+
+      const movement = position - lastPosition;
+      if (Math.abs(movement) < 6) return;
+      lastPosition = position;
+
+      if (movement > 0) {
+        setScrollState("hidden");
+        setActiveDesktop(null);
+        return;
+      }
+
+      const firstSection = document.querySelector("main > :first-child");
+      const headerHeight = window.innerWidth <= 900 ? 72 : 92;
+      // Some pages open with a long form instead of a hero. One viewport is enough there.
+      const pastOpeningSection = firstSection && (
+        firstSection.getBoundingClientRect().bottom <= headerHeight || position >= window.innerHeight
+      );
+      setScrollState(pastOpeningSection ? "visible" : "hidden");
+    };
+
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateHeader);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    if (lastPosition > 8) frame = window.requestAnimationFrame(() => {
+      frame = 0;
+      if (window.scrollY > 8) setScrollState("hidden");
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
   return (
-    <header id="top" className="site-header">
+    <header id="top" className="site-header" data-scroll-state={scrollState} onFocusCapture={() => setScrollState("visible")}>
       <div className="desktop-header" onMouseLeave={() => setActiveDesktop(null)}>
         <Link href="/" className="brand-panel" aria-label="GreenSprout home">
           <Image src="/brand/greensprout-logo.png" alt="GreenSprout Hydroseeding" width={180} height={166} priority />
