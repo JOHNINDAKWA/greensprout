@@ -5,8 +5,8 @@ import { photo } from "@/data/image-library";
 import * as Dialog from "@radix-ui/react-dialog";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Leaf, Menu, Phone, X } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { ChevronDown, FilePenLine, Leaf, Menu, X } from "lucide-react";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 
 import { navigation } from "@/data/site";
@@ -37,10 +37,10 @@ export function SiteHeader() {
         </nav>
         <div className="desktop-actions">
           <Link href="/quote" className="identity-tower">
-            <span className="quote-icon"><Leaf /><span>+</span></span><strong>Get a quote</strong>
+            <FilePenLine aria-hidden="true" /><strong>Start a quote</strong>
           </Link>
-          <Link href="https://wa.me/254700355113" className="header-action header-message" aria-label="Chat with GreenSprout on WhatsApp"><FaWhatsapp /></Link>
-          <Link href="/contact" className="header-action header-phone" aria-label="Contact GreenSprout"><Phone /></Link>
+          <Link href="https://wa.me/254700355113" className="header-action header-message" aria-label="Chat with GreenSprout on WhatsApp"><span className="whatsapp-mark"><FaWhatsapp aria-hidden="true" /></span></Link>
+          <a href="tel:+254700355113" className="header-action header-phone" aria-label="Call GreenSprout at +254 700 355 113"><FaPhoneAlt aria-hidden="true" /></a>
         </div>
         {navigation.map((item) => item.children && activeDesktop === item.label ? (
           <div key={item.label} className="mega-menu" onMouseEnter={() => setActiveDesktop(item.label)}>
@@ -64,8 +64,8 @@ export function SiteHeader() {
           <Image src="/brand/greensprout-logo.png" alt="GreenSprout Hydroseeding" width={116} height={106} priority />
         </Link>
         <div className="mobile-mark" aria-hidden="true"><Leaf /></div>
-        <Link href="https://wa.me/254700355113" className="mobile-action mobile-message" aria-label="WhatsApp GreenSprout"><FaWhatsapp /></Link>
-        <Link href="/contact" className="mobile-action mobile-phone" aria-label="Contact GreenSprout"><Phone /></Link>
+        <Link href="https://wa.me/254700355113" className="mobile-action mobile-message" aria-label="Chat with GreenSprout on WhatsApp"><span className="whatsapp-mark"><FaWhatsapp aria-hidden="true" /></span></Link>
+        <a href="tel:+254700355113" className="mobile-action mobile-phone" aria-label="Call GreenSprout at +254 700 355 113"><FaPhoneAlt aria-hidden="true" /></a>
         <Dialog.Root>
           <Dialog.Trigger asChild><button className="mobile-action mobile-menu" aria-label="Open navigation"><Menu /></button></Dialog.Trigger>
           <Dialog.Portal>

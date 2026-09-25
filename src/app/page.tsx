@@ -64,7 +64,7 @@ export default function Home() {
         <div className="standalone-card"><div><h3>Only need one service?</h3><p>Book a consultation, site survey, soil-testing coordination, BOQ, supervision visit, quality inspection or training workshop separately.</p></div><ButtonLink href="/consulting" label="Explore consulting" /></div>
       </div></section>
 
-      <section className="featured-section"><Image src={photo.soilPreparation} alt="Workers preparing soil for planting" fill sizes="100vw" /><div className="featured-shade" /><div className="page-shell featured-content"><p className="eyebrow light">Plan before spending</p><h2>Good results start with checking the site and choosing the right method.</h2><p>We help you avoid the wrong grass, poor soil preparation, incorrect quantities and weak follow-up.</p><ButtonLink href="/quote" label="Plan your project" /></div></section>
+      <section className="featured-section"><Image src={photo.soilPreparation} alt="Workers preparing soil for planting" fill sizes="100vw" /><div className="featured-shade" /><div className="page-shell featured-content"><p className="eyebrow light">Plan before spending</p><h2>Good results start with checking the site and choosing the right method.</h2><p>We help you avoid the wrong grass, poor soil preparation, incorrect quantities and weak follow-up.</p><ButtonLink href="/quote" label="Plan your project" variant="light" /></div></section>
 
       <section className="capability-section"><div className="page-shell">
         <div className="center-heading"><p className="eyebrow">How we help</p><h2>Practical support at every important stage.</h2></div>
@@ -81,7 +81,7 @@ export default function Home() {
         <div className="process-action"><ButtonLink href="/guides" label="Explore all guides" /></div>
       </div></section>
 
-      <section id="contact" className="contact-section"><Image src={photo.landscapeEstate} alt="Established landscape around a lodge" fill sizes="100vw" /><div className="contact-shade" /><div className="page-shell contact-layout"><p className="eyebrow light">Let’s talk about your site</p><h2>Tell us what you want to improve.</h2><p>Send us the location, approximate size, current condition and your preferred result. We will recommend the best first step.</p><div><ButtonLink href="mailto:info@greensprout.com" label="Email GreenSprout" /><ButtonLink href="tel:+254700355113" label="Call 0700 355 113" variant="outline" /></div></div></section>
+      <section id="contact" className="contact-section"><Image src={photo.landscapeEstate} alt="Established landscape around a lodge" fill sizes="100vw" /><div className="contact-shade" /><div className="page-shell contact-layout"><p className="eyebrow light">Let’s talk about your site</p><h2>Tell us what you want to improve.</h2><p>Send us the location, approximate size, current condition and your preferred result. We will recommend the best first step.</p><div><ButtonLink href="mailto:info@greensprout.com" label="Email GreenSprout" variant="light" /><ButtonLink href="tel:+254700355113" label="Call 0700 355 113" variant="outline" /></div></div></section>
     </main>
     <SiteFooter />
   </>;

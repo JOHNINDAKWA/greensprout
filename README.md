@@ -1,4 +1,4 @@
-# GreenSprout Hydroseeding Website · Phase 9
+# GreenSprout Hydroseeding Website · Phase 10 Revised
 
 The responsive GreenSprout homepage, global navigation and footer, built with
 Next.js App Router, TypeScript and Tailwind CSS.
@@ -27,6 +27,19 @@ npm run lint
 npm run build
 npm start
 ```
+
+## Phase 10 revision
+
+- Square, flush navbar phone and WhatsApp tiles; tall quote tile hangs below the bar
+- Rounded green WhatsApp mark inside the square white tile on desktop and mobile
+- New document and pen icon with “Start a quote” on the quote tile
+- White, high-contrast action buttons on dark hero and image sections
+
+## Phase 10 includes
+
+- Navbar phone and WhatsApp actions styled after the supplied icons, with a direct call link
+- Coordinated Get a Quote action beside them and responsive icon treatments
+- Deeper, quieter forest backgrounds and a soft sage accent throughout pages and social preview cards
 
 ## Phase 9 includes
 

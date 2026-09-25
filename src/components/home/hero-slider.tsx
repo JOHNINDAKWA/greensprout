@@ -50,7 +50,7 @@ export function HeroSlider() {
               <p className="hero-kicker"><span />{slide.label}</p>
               <h1>{slide.title}</h1>
               <p>{slide.copy}</p>
-              <div className="hero-actions"><ButtonLink href="/quote?service=site-assessment" label="Request a site visit" /><ButtonLink href="#solutions" label="See our services" variant="outline" /></div>
+              <div className="hero-actions"><ButtonLink href="/quote?service=site-assessment" label="Request a site visit" variant="light" /><ButtonLink href="#solutions" label="See our services" variant="outline" /></div>
             </div>
           </div>
         ))}
