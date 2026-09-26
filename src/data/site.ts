@@ -18,6 +18,7 @@ export const navigation: NavItem[] = [
   { label: "Consulting", href: "/consulting" },
   { label: "Guides & Advice", href: "/guides" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const footerGroups = [
