@@ -11,7 +11,8 @@ export function SiteFooter() {
     if (label === "Get a quote") return "/quote";
     if (label === "About GreenSprout") return "/about";
     if (label === "Contact") return "/contact";
-    if (["Bronze package", "Silver package", "Gold package", "Consultation", "Site assessment"].includes(label)) return "/consulting";
+    if (["Bronze package", "Silver package", "Gold package"].includes(label)) return `/consulting#${label.split(" ")[0].toLowerCase()}`;
+    if (["Consultation", "Site assessment"].includes(label)) return "/consulting#ways-to-start";
     if (label === "Industries") return "/industries";
     if (label === "Guides & Advice") return "/guides";
     return "/services";

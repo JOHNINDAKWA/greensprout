@@ -1,4 +1,4 @@
-# GreenSprout Hydroseeding Website · Phase 11
+# GreenSprout Hydroseeding Website · Phase 12
 
 The responsive GreenSprout homepage, global navigation and footer, built with
 Next.js App Router, TypeScript and Tailwind CSS.
@@ -27,6 +27,15 @@ npm run lint
 npm run build
 npm start
 ```
+
+## Phase 12 includes
+
+- Illustrated consulting journey with full Bronze, Silver and Gold scopes, starting rates and expandable details
+- Coordinated project delivery, a grouped stand-alone service rate card and a workshop section
+- One shared consulting data source for the homepage, Consulting and Get a Quote pages
+- Quote enquiries preselect individual services, show price guidance and ask relevant site, project or workshop questions
+- Assessment and Project Support pages link to the appropriate consulting detail; website terms reflect scoped fees
+- Percentage-based project fees remain individually quoted because the source notes give conflicting ranges
 
 ## Phase 11 includes
 

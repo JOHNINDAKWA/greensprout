@@ -8,6 +8,7 @@ import { SolutionsCarousel } from "@/components/home/solutions-carousel";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
+import { consultingPackages } from "@/data/consulting";
 
 const process = [
   { title: "Talk to us", copy: "Tell us where the site is, what it looks like and what result you want.", image: photo.projectCoordination },
@@ -24,12 +25,6 @@ const industries = [
   { title: "Hotels, schools and institutions", copy: "Attractive grounds that are practical to establish and maintain.", image: photo.publicGrounds, tag: "Institutions" },
   { title: "Roads and construction sites", copy: "Slope protection, erosion control and vegetation for disturbed ground.", image: photo.roadsideRevegetation, tag: "Infrastructure" },
   { title: "Counties and large projects", copy: "Planning, supervision and reporting for complex public projects.", image: photo.publicSector, tag: "Public sector" },
-];
-
-const packages = [
-  { name: "Bronze", price: "Ksh 30,000", use: "For small residential projects", features: ["Initial consultation", "One site visit", "Basic site assessment", "Summary report"] },
-  { name: "Silver", price: "Ksh 75,000", use: "For estates, schools and businesses", features: ["Detailed site survey", "Grass and soil recommendations", "Estimated project budget", "One supervision visit"], featured: true },
-  { name: "Gold", price: "From Ksh 250,000", use: "For large or complex projects", features: ["Full project plan", "Several site visits", "Contractor coordination", "Inspections and handover"] },
 ];
 
 export default function Home() {
@@ -60,7 +55,7 @@ export default function Home() {
 
       <section id="consulting" className="packages-section"><div className="page-shell">
         <div className="center-heading"><p className="eyebrow">Consulting packages</p><h2>Choose the amount of support your project needs.</h2><p>Prices are clear from the start. Laboratory charges and travel outside the agreed area are quoted separately.</p></div>
-        <div className="package-grid">{packages.map((item) => <article className={`package-card ${item.featured ? "featured" : ""}`} key={item.name}>{item.featured && <span className="package-label">Popular choice</span>}<Leaf /><h3>{item.name}</h3><p className="package-price">{item.price}</p><p className="package-use">{item.use}</p><ul>{item.features.map((feature) => <li key={feature}><Check />{feature}</li>)}</ul><ButtonLink href={`/quote?service=${item.name.toLowerCase()}`} label={`Ask about ${item.name}`} variant={item.featured ? "light" : "primary"} /></article>)}</div>
+        <div className="package-grid">{consultingPackages.map((item,index) => <article className={`package-card ${index === 1 ? "featured" : ""}`} key={item.name}>{index === 1 && <span className="package-label">Popular choice</span>}<Leaf /><h3>{item.name}</h3><p className="package-price">{item.price}</p><p className="package-use">{item.audience}</p><ul>{item.highlights.map((feature) => <li key={feature}><Check />{feature}</li>)}</ul><ButtonLink href={`/consulting#${item.slug}`} label={`See ${item.name} inclusions`} variant={index === 1 ? "light" : "primary"} /></article>)}</div>
         <div className="standalone-card"><div><h3>Only need one service?</h3><p>Book a consultation, site survey, soil-testing coordination, BOQ, supervision visit, quality inspection or training workshop separately.</p></div><ButtonLink href="/consulting" label="Explore consulting" /></div>
       </div></section>
 
