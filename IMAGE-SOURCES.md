@@ -34,3 +34,13 @@ These links supplied technical reference only; no manufacturer imagery or brandi
 | `agriculture-conservation.webp` | Contour grass on farmland | Agriculture and conservation |
 
 The central mapping is in `src/data/image-library.ts`. Service page image arrays in `src/data/services.ts` select images for specific use cases and process steps.
+
+## Phase 14 Eco-Mulching imagery
+
+Three additional photographs in `public/images/eco-mulching/` were generated for this page and converted to WebP. They illustrate a possible on-site cutting method and a separate collect-and-process method. They do not document GreenSprout staff, machinery owned by the business, or finished client work. The page identifies them as illustrative; actual equipment and material handling are defined for each quotation.
+
+| File | Subject |
+| --- | --- |
+| `eco-mulching-hero.webp` | Wide view of an overgrown property and cutting in progress |
+| `mulch-in-place.webp` | Walk-behind machine cutting and shredding vegetation in place |
+| `collect-and-process.webp` | Collected cut grass fed to a separate processing machine |

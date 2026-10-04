@@ -15,6 +15,7 @@ export function SiteFooter() {
     if (["Consultation", "Site assessment"].includes(label)) return "/consulting#ways-to-start";
     if (label === "Industries") return "/industries";
     if (label === "Guides & Advice") return "/guides";
+    if (label === "Eco-Mulching") return "/services/eco-mulching";
     return "/services";
   };
 

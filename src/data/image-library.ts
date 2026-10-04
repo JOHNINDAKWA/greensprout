@@ -3,6 +3,9 @@
 const root = "/images/phase7";
 
 export const photo = {
+  ecoMulchingHero: "/images/eco-mulching/eco-mulching-hero.webp",
+  mulchInPlace: "/images/eco-mulching/mulch-in-place.webp",
+  collectAndProcess: "/images/eco-mulching/collect-and-process.webp",
   hydroHero: `${root}/hydroseeding-hero.webp`,
   hydroMachine: `${root}/hydroseeder-equipment.webp`,
   hydroApplication: `${root}/hydroseeding-application.webp`,

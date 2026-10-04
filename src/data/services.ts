@@ -82,6 +82,17 @@ export const services: Service[] = [
     idealImages: [photo.projectCoordination, photo.projectCoordination, photo.publicGrounds, photo.publicSector, photo.qualityInspection, photo.qualityInspection],
     processImages: [photo.projectCoordination, photo.projectPlanning, photo.projectCoordination, photo.qualityInspection, photo.qualityInspection, photo.landscapeEstate]
   },
+  {
+    slug: "eco-mulching", name: "Eco-Mulching", short: "Cut and manage overgrown grass and suitable vegetation without open burning, with the handling method chosen for your site.",
+    definition: "Eco-Mulching is GreenSprout's approach to cutting and managing existing vegetation. Depending on the site, we can mulch material where it grows or cut and collect it for separate processing.",
+    explanation: ["We review the size, growth, terrain and access before recommending the appropriate method.", "Material may be left on site, gathered for another use or removed where agreed. The finished scope and handling are confirmed in your quotation."],
+    idealFor: ["Large residential compounds", "Estates and commercial grounds", "Schools and institutions", "Accessible farm edges", "Managed open spaces", "Properties avoiding open burning"],
+    benefits: ["Manage overgrown areas", "Avoid on-site burning", "Agree how cut material is handled", "Select a method for site access", "Quote to a defined area", "Combine with wider land care"],
+    process: [{title:"Share your site",copy:"Tell us the area, location and vegetation type."},{title:"Review access",copy:"We look at terrain, obstacles and the amount of cut material."},{title:"Choose a method",copy:"We recommend mulching in place or collection and processing."},{title:"Agree the quote",copy:"The work, material handling and price are confirmed."}],
+    heroImage: photo.ecoMulchingHero, gallery: [photo.mulchInPlace, photo.collectAndProcess, photo.ecoMulchingHero],
+    idealImages: [photo.ecoMulchingHero, photo.mulchInPlace, photo.collectAndProcess, photo.mulchInPlace, photo.ecoMulchingHero, photo.collectAndProcess],
+    processImages: [photo.ecoMulchingHero, photo.mulchInPlace, photo.collectAndProcess, photo.ecoMulchingHero],
+  },
 ];
 
 export const getService = (slug: string) => services.find((service) => service.slug === slug);

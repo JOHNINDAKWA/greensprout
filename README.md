@@ -1,4 +1,4 @@
-# GreenSprout Hydroseeding Website · Phase 12
+# GreenSprout Hydroseeding Website · Phase 14
 
 The responsive GreenSprout homepage, global navigation and footer, built with
 Next.js App Router, TypeScript and Tailwind CSS.
@@ -27,6 +27,12 @@ npm run lint
 npm run build
 npm start
 ```
+
+## Phase 14 includes
+
+- A dedicated Eco-Mulching service page presenting on-site mulching and cut/collect/process methods with three new illustrative photographs
+- Service links in Solutions, the homepage carousel, relevant industry pages and footer; page metadata and sitemap entry
+- A method selector and site-specific questions in Get a Quote, with fees quoted to scope
 
 ## Phase 12 includes
 

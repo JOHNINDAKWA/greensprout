@@ -8,6 +8,7 @@ export const navigation: NavItem[] = [
     { title: "Erosion control", description: "Protect exposed soil and slopes from damage caused by rain and runoff.", href: "/services/erosion-control" },
     { title: "Land rehabilitation", description: "Bring grass and other vegetation back to bare or damaged land.", href: "/services/land-rehabilitation" },
     { title: "Landscape establishment", description: "Plan, prepare and grow healthy green spaces that are easier to maintain.", href: "/services/landscape-establishment" },
+    { title: "Eco-Mulching", description: "Cut and manage overgrown vegetation without open burning.", href: "/services/eco-mulching" },
   ]},
   { label: "Industries", href: "/industries", children: [
     { title: "Property & hospitality", description: "Estates, resorts, schools and commercial landscapes.", href: "/industries/property-hospitality" },
@@ -22,7 +23,7 @@ export const navigation: NavItem[] = [
 ];
 
 export const footerGroups = [
-  { title: "What we do", links: ["Hydroseeding", "Erosion control", "Landscape establishment", "Land rehabilitation"] },
+  { title: "What we do", links: ["Hydroseeding", "Erosion control", "Landscape establishment", "Land rehabilitation", "Eco-Mulching"] },
   { title: "Consulting", links: ["Consultation", "Site assessment", "Bronze package", "Silver package", "Gold package"] },
   { title: "Explore", links: ["Home", "Industries", "Guides & Advice", "Get a quote", "About GreenSprout", "Contact"] },
 ];

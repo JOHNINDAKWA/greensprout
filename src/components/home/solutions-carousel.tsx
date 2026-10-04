@@ -14,6 +14,7 @@ const solutions = [
   { slug:"erosion-control", title: "Erosion control", copy: "Protect exposed soil, reduce runoff and help slopes remain stable during heavy rain.", image: photo.erosionMatting },
   { slug:"landscape-establishment", title: "Landscape establishment", copy: "Prepare the ground, choose suitable grass and support healthy growth after installation.", image: photo.landscapeEstate },
   { slug:"land-rehabilitation", title: "Land rehabilitation", copy: "Bring vegetation back to damaged, bare or heavily disturbed sites.", image: photo.landRehabilitation },
+  { slug:"eco-mulching", title: "Eco-Mulching", copy: "Cut and manage overgrown vegetation on site without open burning.", image: photo.mulchInPlace },
   { slug:"site-assessment", title: "Site assessment", copy: "Understand the soil, slope, drainage, access and site risks before work begins.", image: photo.siteAssessment },
   { slug:"project-support", title: "Project support", copy: "Get help with planning, suppliers, supervision, inspections and final handover.", image: photo.projectCoordination },
 ];

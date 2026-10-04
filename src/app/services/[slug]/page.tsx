@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
+import { EcoMulchingPage } from "@/components/services/eco-mulching-page";
 import { getService, services } from "@/data/services";
 
 export function generateStaticParams() { return services.map(({ slug }) => ({ slug })); }
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const service=getService((await params).slug); if(!service) notFound();
+  if (service.slug === "eco-mulching") return <EcoMulchingPage/>;
   const hydro=service.slug === "hydroseeding";
   return <><SiteHeader/><main>
     <section className="service-hero"><Image src={service.heroImage} alt={service.name} fill priority sizes="100vw"/><div className="service-hero-shade"/><div className="page-shell service-hero-content"><p className="eyebrow light">GreenSprout service</p><h1>{service.name}</h1><p>{service.short}</p><ButtonLink href={`/quote?service=${service.slug}`} label="Request a quotation" variant="light"/></div></section>

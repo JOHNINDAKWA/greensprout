@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
 import { services } from "@/data/services";
 
-export const metadata: Metadata = pageMetadata({ title: "Services", description: "Explore GreenSprout hydroseeding, erosion control, landscape establishment, land rehabilitation and project-support services.", path: "/services" });
+export const metadata: Metadata = pageMetadata({ title: "Services", description: "Explore GreenSprout hydroseeding, Eco-Mulching, erosion control, landscape establishment, land rehabilitation and consulting services in Kenya.", path: "/services" });
 
 export default function ServicesPage() {
   return <><SiteHeader/><main>
