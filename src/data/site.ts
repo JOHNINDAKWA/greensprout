@@ -19,11 +19,12 @@ export const navigation: NavItem[] = [
   { label: "Consulting", href: "/consulting" },
   { label: "Guides & Advice", href: "/guides" },
   { label: "About", href: "/about" },
+  { label: "Investors", href: "/investors" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerGroups = [
   { title: "What we do", links: ["Lawn Care & Maintenance", "Sod Installation & Landscaping", "Site assessment", "Hydroseeding · Coming soon"] },
   { title: "Consulting", links: ["Consultation", "Site assessment", "Bronze package", "Silver package", "Gold package"] },
-  { title: "Explore", links: ["Home", "Industries", "Guides & Advice", "Get a quote", "About GreenSprout", "Contact"] },
+  { title: "Explore", links: ["Home", "Industries", "Guides & Advice", "Get a quote", "About GreenSprout", "Investors", "Contact"] },
 ];

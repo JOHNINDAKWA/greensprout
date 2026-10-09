@@ -76,6 +76,8 @@ export default function Home() {
         <div className="process-action"><ButtonLink href="/guides" label="Explore all guides" /></div>
       </div></section>
 
+      <section className="home-investor"><div className="page-shell home-investor-layout"><div><p className="eyebrow light">Growing GreenSprout</p><h2>Interested in our next stage?</h2></div><div><p>We are welcoming conversations with investors and strategic partners as we plan specialist land and vegetation services in Kenya.</p><Link href="/investors">Explore the opportunity <ArrowRight size={18} /></Link></div></div></section>
+
       <section id="contact" className="contact-section"><Image src={photo.landscapeEstate} alt="Established landscape around a lodge" fill sizes="100vw" /><div className="contact-shade" /><div className="page-shell contact-layout"><p className="eyebrow light">Let’s talk about your site</p><h2>Tell us what you want to improve.</h2><p>Send us the location, approximate size, current condition and your preferred result. We will recommend the best first step.</p><div><ButtonLink href="mailto:info@greensprout.com" label="Email GreenSprout" variant="light" /><ButtonLink href="tel:+254700355113" label="Call 0700 355 113" variant="outline" /></div></div></section>
     </main>
     <SiteFooter />

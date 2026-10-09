@@ -10,6 +10,7 @@ export function SiteFooter() {
     if (label === "Home") return "/";
     if (label === "Get a quote") return "/quote";
     if (label === "About GreenSprout") return "/about";
+    if (label === "Investors") return "/investors";
     if (label === "Contact") return "/contact";
     if (["Bronze package", "Silver package", "Gold package"].includes(label)) return `/consulting#${label.split(" ")[0].toLowerCase()}`;
     if (["Consultation", "Site assessment"].includes(label)) return "/consulting#ways-to-start";
