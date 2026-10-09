@@ -609,9 +609,13 @@ button,a,input { font: inherit; } a { color: inherit; text-decoration: none; } i
 .future-heading { padding-top:clamp(4rem,7vw,7rem); }
 .future-services-grid .services-grid-card { opacity:.94; }
 .availability-tag { position:absolute; top:1.25rem; right:1.25rem; z-index:2; padding:.5rem .72rem; background:#f2f4e9; color:#214a37; font-size:.65rem; font-weight:900; font-style:normal; letter-spacing:.06em; text-transform:uppercase; }
-.service-future-note { display:flex; gap:1.2rem; align-items:center; padding-block:1.1rem; border-bottom:1px solid #c8d7c8; }
-.service-future-note strong { white-space:nowrap; color:#235a40; text-transform:uppercase; letter-spacing:.08em; font-size:.75rem; }
-.service-future-note p { margin:0; font-size:.86rem; }
+.service-future-banner { position:relative; isolation:isolate; color:#fff; background:#102b21; overflow:hidden; }
+.service-future-banner>img { object-fit:cover; object-position:center 55%; z-index:-2; }
+.service-future-banner-shade { position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(9,31,23,.96),rgba(9,31,23,.84) 65%,rgba(9,31,23,.72)); }
+.service-future-banner-content { padding-block:3.5rem; }
+.service-future-banner-content span { display:inline-block; padding:.55rem .8rem; border:1px solid rgba(255,255,255,.65); font-size:.72rem; font-weight:700; letter-spacing:.17em; }
+.service-future-banner-content h2 { max-width:17ch; margin:1.25rem 0 .75rem; font-size:clamp(1.9rem,3.8vw,3.6rem); line-height:1.1; letter-spacing:-.045em; }
+.service-future-banner-content p { max-width:42rem; margin:0; line-height:1.7; color:#ecf1e9; }
 .industry-coming { display:inline-block; position:relative; z-index:2; margin:.5rem 0; padding:.35rem .6rem; background:#f2f4e9; color:#163a28; font-style:normal; font-size:.68rem; font-weight:850; text-transform:uppercase; letter-spacing:.05em; }
 .quote-future-message { padding:1.1rem 1.3rem; background:#eff4eb; border-left:3px solid #35664c; font-size:.86rem; line-height:1.6; }
 .lawn-quote-fields { display:grid; gap:1.2rem; padding:1.5rem; border-left:3px solid #285b45; background:#f1f5ef; }
@@ -634,7 +638,7 @@ button,a,input { font: inherit; } a { color: inherit; text-decoration: none; } i
  .lsp-steps { grid-template-columns:1fr; }
  .lsp-steps article { min-height:10rem; }
  .lsp-next { align-items:flex-start; flex-direction:column; }
- .service-future-note { display:block; } .service-future-note p { margin-top:.45rem; }
+ .service-future-banner-content { padding-block:2.8rem; }
  .industry-service-grid-four { grid-template-columns:1fr; }
 }
 

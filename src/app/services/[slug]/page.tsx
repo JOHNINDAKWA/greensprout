@@ -9,7 +9,6 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
 import { LawnServicePage } from "@/components/services/lawn-service-page";
-import { FutureServicePage } from "@/components/services/future-service-page";
 import { getService, services } from "@/data/services";
 
 export function generateStaticParams() { return services.map(({ slug }) => ({ slug })); }
@@ -18,12 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const service=getService((await params).slug); if(!service) notFound();
   if (service.slug === "lawn-care-maintenance" || service.slug === "sod-installation-landscaping") return <LawnServicePage slug={service.slug}/>;
-  if (service.availability === "coming-soon") return <FutureServicePage service={service}/>;
   const hydro=service.slug === "hydroseeding";
   const future=service.availability === "coming-soon";
   return <><SiteHeader/><main>
     <section className="service-hero"><Image src={service.heroImage} alt={service.name} fill priority sizes="100vw"/><div className="service-hero-shade"/><div className="page-shell service-hero-content"><p className="eyebrow light">{future ? "Future service · Coming soon" : "GreenSprout service"}</p><h1>{service.name}</h1><p>{service.short}</p><ButtonLink href={`/quote?service=${service.slug}`} label={future ? "Discuss a future project" : "Request a quotation"} variant="light"/></div></section>
-    {future && <div className="service-future-note page-shell"><strong>Coming soon</strong><p>This specialist service is planned for a future phase. We can discuss your site now and explain any assessment or traditional lawn service currently relevant to your project.</p></div>}
+    {future && <section className="service-future-banner" aria-label={`${service.name} availability`}><Image src={service.heroImage} alt="" fill sizes="100vw"/><div className="service-future-banner-shade"/><div className="page-shell service-future-banner-content"><span>COMING SOON</span><h2>This service is planned for a future phase.</h2><p>Explore the full service information below. GreenSprout is not yet taking bookings for this work; we can discuss your site and available options in the meantime.</p></div></section>}
     <section className="service-explainer"><div className="page-shell service-explainer-grid"><div className="service-explainer-image"><Image src={service.gallery[0]} alt={`${service.name} in practice`} fill sizes="(max-width:900px) 100vw, 48vw"/></div><div className="service-explainer-copy"><p className="eyebrow">Understanding the service</p><h2>{hydro ? "A modern way to establish natural grass across prepared ground." : `What ${service.name.toLowerCase()} means for your site.`}</h2><p className="service-lead">{service.definition}</p>{service.explanation.map((paragraph)=><p key={paragraph}>{paragraph}</p>)}<Link href={`/quote?service=${service.slug}`}>Discuss your site <ArrowRight/></Link></div></div></section>
     {service.slug === "site-assessment" && <section className="p12-service-context"><div className="page-shell"><p className="eyebrow">Choose the right visit</p><h2>Advice on site or a detailed survey?</h2><p>An on-site consultation starts at KSh 15,000. A more detailed site survey starts at KSh 25,000. We agree on the visit, report and any travel or laboratory costs before booking.</p><Link href="/consulting#individual-services">Compare assessment options <ArrowRight size={18}/></Link></div></section>}
     {service.slug === "project-support" && <section className="p12-service-context"><div className="page-shell"><p className="eyebrow">Delivery support</p><h2>Coordination with a clear scope.</h2><p>Supplier and contractor coordination, site supervision, quality checks and handover can be agreed as one assignment or selected individually. The fee is quoted after we understand the project and what is already included in any consulting package.</p><Link href="/consulting#coordination">Explore project coordination <ArrowRight size={18}/></Link></div></section>}
