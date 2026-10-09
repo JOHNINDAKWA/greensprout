@@ -95,7 +95,7 @@ export function SiteHeader() {
         {navigation.map((item) => item.children && activeDesktop === item.label ? (
           <div key={item.label} className="mega-menu" onMouseEnter={() => setActiveDesktop(item.label)}>
             <div className="mega-intro">
-              <Image src={item.label === "Industries" ? photo.publicGrounds : photo.lawnDetail} alt="Illustrative view of GreenSprout's landscape services" fill sizes="34vw" />
+              <Image src={item.label === "Industries" ? photo.publicGrounds : photo.lawnDetail} alt="Landscape services" fill sizes="34vw" />
               <div><p className="eyebrow">Explore {item.label}</p><h2>Practical help for better land and healthier landscapes.</h2><Link className="mega-main-button" href={item.label === "Solutions" ? "/services" : "/industries"}>See all {item.label.toLowerCase()} <span>→</span></Link></div>
             </div>
             <div className="mega-links">

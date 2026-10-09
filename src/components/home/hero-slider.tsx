@@ -10,23 +10,23 @@ import { ButtonLink } from "@/components/ui/button-link";
 const slides = [
   {
     image: photo.lawnHero,
-    alt: "Illustrative large lawn being professionally mowed",
+    alt: "Large lawn being professionally mowed",
     label: "Lawn care for larger grounds",
-    title: <>A lawn that looks<br /><em>well cared for.</em></>,
+    title: <>Lawn care for<br /><em>larger grounds.</em></>,
     copy: "Professional mowing and grass management for accessible lawns, residential estates and managed grounds.",
   },
   {
     image: photo.sodHero,
-    alt: "Illustrative traditional turf being laid on prepared soil",
+    alt: "Natural turf being laid on prepared soil",
     label: "Traditional sod installation",
-    title: <>A new lawn,<br /><em>properly prepared.</em></>,
+    title: <>Sod installation &amp;<br /><em>site preparation.</em></>,
     copy: "Natural turf installation with careful ground preparation, a considered finish and guidance for the first weeks of care.",
   },
   {
     image: photo.hydroHero,
-    alt: "Illustration of future hydroseeding method",
+    alt: "Hydroseeding equipment applying a slurry to prepared ground",
     label: "Hydroseeding · Coming soon",
-    title: <>The next chapter<br /><em>in green spaces.</em></>,
+    title: <>Hydroseeding<br /><em>coming soon.</em></>,
     copy: "Hydroseeding is planned for a future phase. Today we can discuss your site and help with currently available lawn and landscape services.",
   },
 ];

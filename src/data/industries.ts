@@ -24,8 +24,8 @@ export const industries: Industry[] = [
     heroImage: photo.landscapeEstate,
     contextImage: photo.siteAssessment,
     outcomeImage: photo.aftercareIrrigation,
-    contextTitle: "A landscape that works as well as it looks.",
-    outcomeTitle: "Grounds people can enjoy and maintain.",
+    contextTitle: "Lawn care and site planning for properties.",
+    outcomeTitle: "Well-maintained grounds for regular use.",
     challenge: "Outdoor areas must look considered, withstand regular use and remain manageable after handover. We help owners and project teams choose suitable grass, prepare the site correctly and establish a clear care plan.",
     priorities: [
       { title: "The right finish", copy: "Grass and establishment methods selected for appearance, traffic, sunlight and intended use." },
@@ -48,8 +48,8 @@ export const industries: Industry[] = [
     heroImage: photo.erosionRunoff,
     contextImage: photo.erosionMatting,
     outcomeImage: photo.roadsideRevegetation,
-    contextTitle: "Exposed ground cannot wait for grass to grow.",
-    outcomeTitle: "Stabilised sites with a clear handover.",
+    contextTitle: "Managing exposed soil on infrastructure sites.",
+    outcomeTitle: "Planned erosion control and site handover.",
     challenge: "Infrastructure works often leave large, steep or disturbed surfaces exposed to rainfall. We assess the risk, plan suitable protection and help establish vegetation that supports safer, more stable land.",
     priorities: [
       { title: "Slope stability", copy: "Treatments informed by gradient, runoff, soil condition and the severity of erosion risk." },
@@ -71,8 +71,8 @@ export const industries: Industry[] = [
     heroImage: photo.publicSector,
     contextImage: photo.siteAssessment,
     outcomeImage: photo.qualityInspection,
-    contextTitle: "Public land needs a plan people can follow.",
-    outcomeTitle: "Practical results that can be accounted for.",
+    contextTitle: "Site planning for public land.",
+    outcomeTitle: "Documented work and maintenance plans.",
     challenge: "Public projects must serve many users, respond to local conditions and show how decisions and resources were managed. We provide defined recommendations, scopes, inspections and practical handover guidance.",
     priorities: [
       { title: "Defined scope", copy: "Clear site needs, deliverables, quantities and responsibilities before implementation begins." },
@@ -94,8 +94,8 @@ export const industries: Industry[] = [
     heroImage: photo.agricultureConservation,
     contextImage: photo.soilSample,
     outcomeImage: photo.landRehabilitation,
-    contextTitle: "Protecting the soil starts with understanding it.",
-    outcomeTitle: "Healthier cover with a realistic care plan.",
+    contextTitle: "Soil conditions and vegetation establishment.",
+    outcomeTitle: "Established vegetation and ongoing care.",
     challenge: "Productive and conservation land depend on healthy soil, controlled water movement and appropriate vegetation. We help identify vulnerable areas and plan realistic protection or restoration work.",
     priorities: [
       { title: "Protect the soil", copy: "Reduce bare ground, runoff and continuing loss of valuable topsoil." },
