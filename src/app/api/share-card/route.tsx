@@ -40,7 +40,7 @@ export async function GET(request: Request) {
         GREENSPROUT
       </div>
       <div style={{ display: "flex", maxWidth: 980, flexDirection: "column", gap: 20 }}>
-        <div style={{ display: "flex", color: "#d2ddbf", fontSize: 18, fontWeight: 700, letterSpacing: 4 }}>HYDROSEEDING · EROSION CONTROL · LAND CONSULTING</div>
+        <div style={{ display: "flex", color: "#d2ddbf", fontSize: 18, fontWeight: 700, letterSpacing: 4 }}>LAWN CARE · SOD INSTALLATION · SITE CONSULTING</div>
         <div style={{ display: "flex", fontSize: size, fontWeight: 700, letterSpacing: -3, lineHeight: 1.05 }}>{title}</div>
       </div>
       <div style={{ display: "flex", width: "100%", paddingTop: 22, borderTop: "2px solid rgba(255,255,255,.35)", justifyContent: "space-between", color: "#e1eddb", fontSize: 22 }}>

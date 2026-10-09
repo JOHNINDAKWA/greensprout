@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 
-export const metadata: Metadata = pageMetadata({ title: "Contact GreenSprout", description: "Contact GreenSprout about hydroseeding, erosion control, site assessments and landscape projects in Kenya.", path: "/contact" });
+export const metadata: Metadata = pageMetadata({ title: "Contact GreenSprout", description: "Contact GreenSprout about lawn care, sod installation, site assessments and future specialist landscape projects in Kenya.", path: "/contact" });
 
 export default function ContactPage() {
   return <><SiteHeader /><main>

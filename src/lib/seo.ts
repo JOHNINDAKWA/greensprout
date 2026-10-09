@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const SITE_NAME = "GreenSprout Hydroseeding";
 export const SITE_DESCRIPTION =
-  "Hydroseeding, Eco-Mulching, erosion control, landscape establishment and practical land consulting for projects in Kenya.";
+  "Lawn care, traditional sod installation, landscape preparation and practical site consulting in Kenya. Hydroseeding and specialist land services are coming soon.";
 
 // Set NEXT_PUBLIC_SITE_URL to the actual HTTPS domain before a public build.
 export const isPublicSite = Boolean(process.env.NEXT_PUBLIC_SITE_URL);

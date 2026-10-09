@@ -3,6 +3,7 @@ import { photo } from "@/data/image-library";
 export type Service = {
   slug: string;
   name: string;
+  availability?: "coming-soon";
   short: string;
   definition: string;
   explanation: string[];
@@ -17,7 +18,29 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "hydroseeding", name: "Hydroseeding", short: "A modern way to plant grass quickly and evenly using a sprayed mixture of seed, water, mulch and nutrients.",
+    slug: "lawn-care-maintenance", name: "Lawn Care & Maintenance", short: "Professional mowing and grass management for established lawns, estates and larger managed grounds.",
+    definition: "Keep established lawns neat and usable with a site-specific mowing plan. We look at grass condition, obstacles, access and the finish you want before quoting.",
+    explanation: ["The intended approach is a tractor with a rear-mounted, PTO-driven, three-point-hitch grooming mower. It gives a finish cut across open, accessible, established turf. Detailed edges, tight corners and difficult sections are planned separately.", "A rear-discharge deck spreads ordinary clippings behind the mower. It does not automatically collect them or perform a dedicated mulching pass. If collection, transport or disposal is required, we assess and quote that work separately.", "This service is for mowable grass. Dense brush, woody vegetation and rough construction sites need different equipment and a separate assessment. Equipment selection and site suitability are confirmed before booking."],
+    idealFor: ["Large residential lawns", "Estates and compounds", "Schools and institutions", "Hospitality grounds", "Office campuses", "Regular lawn-care schedules"],
+    benefits: ["Neat, even mowing", "Coverage for larger open lawns", "Clipping-handling options", "Attention to access and obstacles", "One-off or planned visits", "Clear site-based quotation"],
+    process: [{title:"Tell us about the lawn",copy:"Share the location, area, photos and how often it is cut."},{title:"Assess access",copy:"We check slope, obstacles, grass height and equipment access."},{title:"Agree the finish",copy:"Choose mowing frequency and how clippings should be handled."},{title:"Mow",copy:"We cut suitable open grass and address agreed detail areas."},{title:"Tidy",copy:"We check edges and handle clippings as quoted."},{title:"Plan the next visit",copy:"We recommend a maintenance interval for the season."}],
+    heroImage: photo.lawnHero, gallery: [photo.lawnDetail, photo.lawnComparison, photo.lawnHero],
+    idealImages: [photo.lawnComparison,photo.lawnHero,photo.lawnDetail,photo.lawnHero,photo.lawnDetail,photo.lawnComparison],
+    processImages: [photo.lawnComparison,photo.siteAssessment,photo.projectPlanning,photo.lawnHero,photo.lawnDetail,photo.lawnComparison]
+  },
+  {
+    slug: "sod-installation-landscaping", name: "Sod Installation & Landscaping", short: "Traditional turf laying and practical landscape preparation for new lawns and refreshed outdoor spaces.",
+    definition: "Sodding means laying grown natural turf onto correctly prepared soil. It creates visible green cover immediately, while the roots still need time, water and care to establish.",
+    explanation: ["We begin with site levels, soil condition, drainage, sunlight and the way the space will be used. Clearing, grading, soil improvements and irrigation are specified where needed.", "Fresh turf is selected, supplied and laid with tight joins and a clean finish around paths and planting beds. The scope can also include straightforward landscape details agreed for the site.", "We explain the first watering and care period before handover. Lawn size, turf choice, access, ground work and aftercare all affect the final quotation."],
+    idealFor: ["New home lawns", "Residential estates", "Hotel and hospitality gardens", "Schools and play areas", "Commercial courtyards", "Existing lawn renewal"],
+    benefits: ["An immediately green finish", "Traditional natural turf", "Soil preparation included in the plan", "Defined edging and finishing", "Turf suited to site use", "Early establishment guidance"],
+    process: [{title:"Assess the site",copy:"Check levels, soil, water, access and the intended use."},{title:"Plan the finish",copy:"Select turf, quantities, ground work and landscape details."},{title:"Prepare the ground",copy:"Clear, grade and improve soil as agreed."},{title:"Lay the sod",copy:"Fit fresh natural turf with tight joins and clean edges."},{title:"Water and settle",copy:"Start irrigation and protect the new surface."},{title:"Guide establishment",copy:"Explain early use, watering and the first mow."}],
+    heroImage: photo.sodHero, gallery: [photo.sodDetail, photo.sodComparison, photo.sodHero],
+    idealImages: [photo.sodComparison,photo.sodHero,photo.sodDetail,photo.sodHero,photo.sodComparison,photo.sodDetail],
+    processImages: [photo.siteAssessment,photo.projectPlanning,photo.soilPreparation,photo.sodDetail,photo.aftercareIrrigation,photo.sodComparison]
+  },
+  {
+    slug: "hydroseeding", name: "Hydroseeding", availability: "coming-soon", short: "A future service for establishing grass with a sprayed mixture of seed, water and mulch.",
     definition: "Hydroseeding uses specialised equipment to spray a carefully prepared mixture onto the soil. The mulch helps hold moisture around the seed, supports germination and gives large or difficult areas more even coverage than planting by hand.",
     explanation: ["The mixture is prepared for the specific site rather than treated as a one-formula solution. We consider the intended use, local conditions, grass variety, soil condition and the amount of care the new lawn can receive.", "Once the ground is ready, the mixture is sprayed in an even layer. The mulch helps keep seed in contact with the soil and retain moisture during germination. With reliable watering and early care, the seed develops into a natural lawn rooted in the existing soil.", "Hydroseeding is especially useful where hand sowing would be slow or uneven, but it is not a shortcut around good preparation. Drainage, soil quality, watering and maintenance still determine the final result."],
     idealFor: ["New residential lawns", "Estates, schools and hotels", "Road verges and embankments", "Large commercial grounds", "Sloping or hard-to-reach areas", "Land that needs fast vegetation cover"],
@@ -28,7 +51,7 @@ export const services: Service[] = [
     processImages: [photo.siteAssessment, photo.soilPreparation, photo.hydroMachine, photo.hydroApplication, photo.aftercareIrrigation, photo.qualityInspection]
   },
   {
-    slug: "erosion-control", name: "Erosion control", short: "Practical methods that protect exposed soil and slopes from being washed away by rain and runoff.",
+    slug: "erosion-control", name: "Erosion control", availability: "coming-soon", short: "Future specialist slope and soil protection services, planned for suitable sites.",
     definition: "Erosion control starts by understanding where water comes from, how it moves and which areas are losing soil. We then recommend vegetation, matting, drainage support or a combination suited to the risk and budget.",
     explanation: ["We trace the movement of rainwater and runoff before recommending a treatment. This helps address the cause of soil loss instead of covering only the visible damage.", "Depending on the slope and risk, the answer may include grass establishment, erosion-control blankets, surface-water guidance, soil reshaping or several methods working together.", "The goal is a stable surface that can withstand local weather, protect nearby property and become easier to maintain over time."],
     idealFor: ["Road embankments", "Construction sites", "Steep residential compounds", "Drainage channels", "River and water edges", "Bare soil exposed to heavy rain"],
@@ -39,7 +62,7 @@ export const services: Service[] = [
     processImages: [photo.erosionRunoff, photo.siteAssessment, photo.projectPlanning, photo.soilPreparation, photo.erosionMatting, photo.qualityInspection]
   },
   {
-    slug: "landscape-establishment", name: "Landscape establishment", short: "Complete support for turning prepared ground into healthy, attractive and maintainable green space.",
+    slug: "landscape-establishment", name: "Landscape establishment", availability: "coming-soon", short: "Future integrated ground-establishment projects, including methods that depend on hydroseeding.",
     definition: "Landscape establishment covers the practical work required to create a new green area—from understanding the intended use to soil preparation, grass selection, installation and early maintenance.",
     explanation: ["A successful landscape begins with how the space will be used. A family lawn, school field, hotel garden and commercial compound do not need the same grass, finish or maintenance plan.", "We connect the site assessment, soil preparation, species selection, quantities, installation and early care so the work follows one clear plan.", "This approach gives the client a landscape that looks considered, suits the site and has a realistic path to healthy establishment."],
     idealFor: ["Homes and estates", "Schools and institutions", "Hotels and resorts", "Office compounds", "Public recreation areas", "New developments"],
@@ -50,7 +73,7 @@ export const services: Service[] = [
     processImages: [photo.projectCoordination, photo.siteAssessment, photo.projectPlanning, photo.soilPreparation, photo.hydroApplication, photo.aftercareIrrigation]
   },
   {
-    slug: "land-rehabilitation", name: "Land rehabilitation", short: "Restore useful vegetation to bare, degraded or heavily disturbed land.",
+    slug: "land-rehabilitation", name: "Land rehabilitation", availability: "coming-soon", short: "Future large-site revegetation and rehabilitation services for disturbed land.",
     definition: "Land rehabilitation helps damaged ground recover enough structure, protection and vegetation to become stable and useful again. The response depends on why the land was disturbed and what it should support afterwards.",
     explanation: ["We first establish what damaged the land—such as construction, compaction, erosion, excavation or loss of topsoil—and what the restored site needs to become.", "The work can include reshaping, loosening compacted areas, rebuilding soil condition, managing water and establishing suitable vegetation in practical stages.", "Rehabilitation is measured by more than appearance. The restored surface should be safer, more stable and maintainable for its intended future use."],
     idealFor: ["Construction spoil areas", "Quarries and borrow pits", "Degraded public land", "Industrial sites", "Cleared or compacted ground", "Conservation and restoration work"],
@@ -81,17 +104,6 @@ export const services: Service[] = [
     heroImage: photo.projectCoordination, gallery: [photo.projectCoordination, photo.qualityInspection, photo.publicGrounds],
     idealImages: [photo.projectCoordination, photo.projectCoordination, photo.publicGrounds, photo.publicSector, photo.qualityInspection, photo.qualityInspection],
     processImages: [photo.projectCoordination, photo.projectPlanning, photo.projectCoordination, photo.qualityInspection, photo.qualityInspection, photo.landscapeEstate]
-  },
-  {
-    slug: "eco-mulching", name: "Eco-Mulching", short: "Cut and manage overgrown grass and suitable vegetation without open burning, with the handling method chosen for your site.",
-    definition: "Eco-Mulching is GreenSprout's approach to cutting and managing existing vegetation. Depending on the site, we can mulch material where it grows or cut and collect it for separate processing.",
-    explanation: ["We review the size, growth, terrain and access before recommending the appropriate method.", "Material may be left on site, gathered for another use or removed where agreed. The finished scope and handling are confirmed in your quotation."],
-    idealFor: ["Large residential compounds", "Estates and commercial grounds", "Schools and institutions", "Accessible farm edges", "Managed open spaces", "Properties avoiding open burning"],
-    benefits: ["Manage overgrown areas", "Avoid on-site burning", "Agree how cut material is handled", "Select a method for site access", "Quote to a defined area", "Combine with wider land care"],
-    process: [{title:"Share your site",copy:"Tell us the area, location and vegetation type."},{title:"Review access",copy:"We look at terrain, obstacles and the amount of cut material."},{title:"Choose a method",copy:"We recommend mulching in place or collection and processing."},{title:"Agree the quote",copy:"The work, material handling and price are confirmed."}],
-    heroImage: photo.ecoMulchingHero, gallery: [photo.mulchInPlace, photo.collectAndProcess, photo.ecoMulchingHero],
-    idealImages: [photo.ecoMulchingHero, photo.mulchInPlace, photo.collectAndProcess, photo.mulchInPlace, photo.ecoMulchingHero, photo.collectAndProcess],
-    processImages: [photo.ecoMulchingHero, photo.mulchInPlace, photo.collectAndProcess, photo.ecoMulchingHero],
   },
 ];
 

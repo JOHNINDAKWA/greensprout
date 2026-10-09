@@ -3,7 +3,7 @@
 import Select, { type SingleValue } from "react-select";
 import { FormEvent, useState } from "react";
 
-const serviceOptions = ["Hydroseeding", "Erosion control", "Landscape establishment", "Land rehabilitation", "Site assessment", "Consulting or project support", "Not sure yet"].map((label) => ({ label, value: label }));
+const serviceOptions = ["Lawn Care & Maintenance", "Sod Installation & Landscaping", "Site assessment", "Consulting or project support", "Hydroseeding · Coming soon", "Erosion control · Coming soon", "Land rehabilitation · Coming soon", "Not sure yet"].map((label) => ({ label, value: label }));
 
 export function ContactForm() {
   const [service, setService] = useState<SingleValue<(typeof serviceOptions)[number]>>(null);

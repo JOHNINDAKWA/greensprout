@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   applicationName: SITE_NAME,
-  keywords: ["hydroseeding Kenya", "erosion control Kenya", "landscape establishment", "site assessment", "land rehabilitation"],
+  keywords: ["lawn care Kenya", "sod installation Kenya", "natural turf installation", "landscape preparation", "site assessment", "hydroseeding coming soon"],
 };
 
 const organization = {

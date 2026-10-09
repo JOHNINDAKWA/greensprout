@@ -7,7 +7,7 @@ import { QuoteForm } from "@/components/quote/quote-form";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 
-export const metadata: Metadata = pageMetadata({ title: "Get a quote", description: "Tell GreenSprout about your site and request a clear scope and quotation for consulting, hydroseeding or landscape work in Kenya.", path: "/quote" });
+export const metadata: Metadata = pageMetadata({ title: "Get a quote", description: "Request a site-based quotation for lawn care, natural sod installation or consulting. Ask about future specialist services in Kenya.", path: "/quote" });
 
 export default async function QuotePage({ searchParams }: { searchParams: Promise<{ service?: string; method?: string }> }) {
   const { service = "not-sure", method } = await searchParams;

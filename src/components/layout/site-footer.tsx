@@ -15,7 +15,9 @@ export function SiteFooter() {
     if (["Consultation", "Site assessment"].includes(label)) return "/consulting#ways-to-start";
     if (label === "Industries") return "/industries";
     if (label === "Guides & Advice") return "/guides";
-    if (label === "Eco-Mulching") return "/services/eco-mulching";
+    if (label === "Lawn Care & Maintenance") return "/services/lawn-care-maintenance";
+    if (label === "Sod Installation & Landscaping") return "/services/sod-installation-landscaping";
+    if (label === "Hydroseeding · Coming soon") return "/services/hydroseeding";
     return "/services";
   };
 

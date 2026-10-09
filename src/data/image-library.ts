@@ -3,9 +3,12 @@
 const root = "/images/phase7";
 
 export const photo = {
-  ecoMulchingHero: "/images/eco-mulching/eco-mulching-hero.webp",
-  mulchInPlace: "/images/eco-mulching/mulch-in-place.webp",
-  collectAndProcess: "/images/eco-mulching/collect-and-process.webp",
+  lawnHero: "/images/lawn-services/lawn-care-hero.webp",
+  lawnDetail: "/images/lawn-services/lawn-detail.webp",
+  lawnComparison: "/images/lawn-services/lawn-before-after.webp",
+  sodHero: "/images/lawn-services/sod-installation-hero.webp",
+  sodDetail: "/images/lawn-services/sod-detail.webp",
+  sodComparison: "/images/lawn-services/sod-before-after.webp",
   hydroHero: `${root}/hydroseeding-hero.webp`,
   hydroMachine: `${root}/hydroseeder-equipment.webp`,
   hydroApplication: `${root}/hydroseeding-application.webp`,

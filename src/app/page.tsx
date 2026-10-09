@@ -15,7 +15,7 @@ const process = [
   { title: "We inspect the site", copy: "We check the soil, slope, drainage, access and size of the area.", image: photo.siteAssessment },
   { title: "We prepare a clear plan", copy: "You receive the recommended method, materials, cost and work plan.", image: photo.projectPlanning },
   { title: "We prepare the site", copy: "The ground is cleared, shaped and prepared for healthy vegetation growth.", image: photo.soilPreparation },
-  { title: "We carry out the work", copy: "The agreed grass, seed and erosion-control materials are installed correctly.", image: photo.hydroApplication },
+  { title: "We carry out the work", copy: "The agreed lawn or turf work is completed against the site plan.", image: photo.sodDetail },
   { title: "We inspect the result", copy: "We check coverage, workmanship and any areas that need correction.", image: photo.qualityInspection },
   { title: "We guide maintenance", copy: "We explain watering, care and follow-up needed for successful establishment.", image: photo.aftercareIrrigation },
 ];
@@ -23,7 +23,7 @@ const process = [
 const industries = [
   { title: "Homes and residential estates", copy: "New lawns, bare compounds, slopes and shared green areas.", image: photo.landscapeEstate, tag: "Residential" },
   { title: "Hotels, schools and institutions", copy: "Attractive grounds that are practical to establish and maintain.", image: photo.publicGrounds, tag: "Institutions" },
-  { title: "Roads and construction sites", copy: "Slope protection, erosion control and vegetation for disturbed ground.", image: photo.roadsideRevegetation, tag: "Infrastructure" },
+  { title: "Roads and construction sites", copy: "Site assessments and project planning; specialist slope work is coming soon.", image: photo.roadsideRevegetation, tag: "Future specialist work" },
   { title: "Counties and large projects", copy: "Planning, supervision and reporting for complex public projects.", image: photo.publicSector, tag: "Public sector" },
 ];
 
@@ -49,7 +49,7 @@ export default function Home() {
       </div></section>
 
       <section id="industries" className="industries-section"><div className="page-shell">
-        <div className="center-heading"><p className="eyebrow">Who we work with</p><h2>Green solutions for homes, businesses and major projects.</h2></div>
+        <div className="center-heading"><p className="eyebrow">Who we work with</p><h2>Lawn and site support for homes, businesses and planned major projects.</h2></div>
         <div className="industry-cards">{industries.map((item) => <article key={item.title}><Image src={item.image} alt={item.title} fill sizes="(max-width:760px) 100vw, 50vw" /><div className="industry-shade"/><div className="industry-content"><span>{item.tag}</span><h3>{item.title}</h3><p>{item.copy}</p><Link href="/quote">Discuss your project <ArrowRight /></Link></div></article>)}</div>
       </div></section>
 

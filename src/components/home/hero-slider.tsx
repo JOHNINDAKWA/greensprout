@@ -9,25 +9,25 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 const slides = [
   {
+    image: photo.lawnHero,
+    alt: "Illustrative large lawn being professionally mowed",
+    label: "Lawn care for larger grounds",
+    title: <>A lawn that looks<br /><em>well cared for.</em></>,
+    copy: "Professional mowing and grass management for accessible lawns, residential estates and managed grounds.",
+  },
+  {
+    image: photo.sodHero,
+    alt: "Illustrative traditional turf being laid on prepared soil",
+    label: "Traditional sod installation",
+    title: <>A new lawn,<br /><em>properly prepared.</em></>,
+    copy: "Natural turf installation with careful ground preparation, a considered finish and guidance for the first weeks of care.",
+  },
+  {
     image: photo.hydroHero,
-    alt: "Worker spraying hydroseeding slurry beside a machine",
-    label: "A modern way to plant grass in Kenya",
-    title: <>Plant grass faster.<br /><em>Cover the ground evenly.</em></>,
-    copy: "Hydroseeding sprays a prepared mixture of grass seed, water, mulch and nutrients onto the soil. It is a faster, more even way to establish grass on lawns, large grounds and slopes.",
-  },
-  {
-    image: photo.erosionRunoff,
-    alt: "Exposed slope showing erosion after rainfall",
-    label: "Erosion control for slopes and bare ground",
-    title: <>Protect your soil.<br /><em>Reduce damage from rain.</em></>,
-    copy: "We help protect exposed soil and slopes from being washed away. We inspect the land, study how water moves and recommend a suitable erosion-control method.",
-  },
-  {
-    image: photo.landscapeEstate,
-    alt: "Landscaped grounds with established grass",
-    label: "Landscape planning and project support",
-    title: <>Turn bare land into<br /><em>a healthy green space.</em></>,
-    copy: "We help you choose suitable grass, prepare the soil, plan the work and care for the new vegetation until it is properly established.",
+    alt: "Illustration of future hydroseeding method",
+    label: "Hydroseeding · Coming soon",
+    title: <>The next chapter<br /><em>in green spaces.</em></>,
+    copy: "Hydroseeding is planned for a future phase. Today we can discuss your site and help with currently available lawn and landscape services.",
   },
 ];
 

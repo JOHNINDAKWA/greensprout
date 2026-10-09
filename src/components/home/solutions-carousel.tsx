@@ -10,13 +10,12 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback } from "react";
 
 const solutions = [
-  { slug:"hydroseeding", title: "Hydroseeding", copy: "Establish grass quickly and evenly on large areas, slopes and hard-to-reach ground.", image: photo.hydroApplication },
-  { slug:"erosion-control", title: "Erosion control", copy: "Protect exposed soil, reduce runoff and help slopes remain stable during heavy rain.", image: photo.erosionMatting },
-  { slug:"landscape-establishment", title: "Landscape establishment", copy: "Prepare the ground, choose suitable grass and support healthy growth after installation.", image: photo.landscapeEstate },
-  { slug:"land-rehabilitation", title: "Land rehabilitation", copy: "Bring vegetation back to damaged, bare or heavily disturbed sites.", image: photo.landRehabilitation },
-  { slug:"eco-mulching", title: "Eco-Mulching", copy: "Cut and manage overgrown vegetation on site without open burning.", image: photo.mulchInPlace },
+  { slug:"lawn-care-maintenance", title: "Lawn Care & Maintenance", copy: "Professional mowing for established lawns and larger managed grounds.", image: photo.lawnDetail },
+  { slug:"sod-installation-landscaping", title: "Sod Installation & Landscaping", copy: "Natural turf and careful site preparation for a new green space.", image: photo.sodDetail },
   { slug:"site-assessment", title: "Site assessment", copy: "Understand the soil, slope, drainage, access and site risks before work begins.", image: photo.siteAssessment },
   { slug:"project-support", title: "Project support", copy: "Get help with planning, suppliers, supervision, inspections and final handover.", image: photo.projectCoordination },
+  { slug:"hydroseeding", title: "Hydroseeding · Coming soon", copy: "A specialist method planned for future grass establishment projects.", image: photo.hydroApplication },
+  { slug:"erosion-control", title: "Erosion control · Coming soon", copy: "Specialist slope protection planned for a future phase.", image: photo.erosionMatting },
 ];
 
 export function SolutionsCarousel() {
@@ -25,7 +24,7 @@ export function SolutionsCarousel() {
   const next = useCallback(() => embla?.scrollNext(), [embla]);
 
   return <section id="solutions" className="solutions-section"><div className="page-shell solutions-layout">
-    <div className="solutions-intro"><p className="eyebrow">Our services</p><h2>What can we help you improve?</h2><p>We provide practical support for growing grass, protecting soil and restoring land.</p><Link href="/services" className="simple-button">View all services <ArrowRight /></Link><div className="carousel-buttons"><button onClick={previous} aria-label="Previous services"><ArrowLeft /></button><button onClick={next} aria-label="Next services"><ArrowRight /></button></div></div>
+    <div className="solutions-intro"><p className="eyebrow">Our services</p><h2>What can we help you improve?</h2><p>Explore lawn and traditional turf services now, with specialist methods clearly marked for the future.</p><Link href="/services" className="simple-button">View all services <ArrowRight /></Link><div className="carousel-buttons"><button onClick={previous} aria-label="Previous services"><ArrowLeft /></button><button onClick={next} aria-label="Next services"><ArrowRight /></button></div></div>
     <div className="solution-viewport" ref={viewportRef}><div className="solution-rail">{solutions.map((solution) => <article className="solution-card" key={solution.title}><div className="solution-image"><Image src={solution.image} alt={solution.title} fill sizes="(max-width:760px) 100vw, 28vw" /></div><h3>{solution.title}</h3><p>{solution.copy}</p><Link href={`/services/${solution.slug}`}>Learn more <ArrowRight /></Link></article>)}</div></div>
   </div></section>;
 }

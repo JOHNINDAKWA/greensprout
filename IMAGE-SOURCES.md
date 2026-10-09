@@ -35,12 +35,19 @@ These links supplied technical reference only; no manufacturer imagery or brandi
 
 The central mapping is in `src/data/image-library.ts`. Service page image arrays in `src/data/services.ts` select images for specific use cases and process steps.
 
-## Phase 14 Eco-Mulching imagery
+## Current lawn and sod imagery
 
-Three additional photographs in `public/images/eco-mulching/` were generated for this page and converted to WebP. They illustrate a possible on-site cutting method and a separate collect-and-process method. They do not document GreenSprout staff, machinery owned by the business, or finished client work. The page identifies them as illustrative; actual equipment and material handling are defined for each quotation.
+Six new photorealistic illustrative concept images were generated specifically for the lawn care and traditional sod pages, then compressed as WebP in `public/images/lawn-services/`.
 
-| File | Subject |
+| File | Scene |
 | --- | --- |
-| `eco-mulching-hero.webp` | Wide view of an overgrown property and cutting in progress |
-| `mulch-in-place.webp` | Walk-behind machine cutting and shredding vegetation in place |
-| `collect-and-process.webp` | Collected cut grass fed to a separate processing machine |
+| `lawn-care-hero.webp` | Concept of a compact tractor pulling a three-point-hitch rear-discharge grooming mower on an accessible estate lawn |
+| `lawn-detail.webp` | Closer concept of the rear-mounted PTO finishing deck and tractor on maintained turf |
+| `lawn-before-after.webp` | Two-panel conceptual before/after of the same mowable lawn |
+| `sod-installation-hero.webp` | Workers laying natural turf onto prepared soil in proposed forest-green polo and beige field uniform |
+| `sod-detail.webp` | Close view of turf rolls, fitting seams and proposed field uniform |
+| `sod-before-after.webp` | Two-panel conceptual bare-ground-to-turf comparison |
+
+The four action scenes above were regenerated from the prior page images using the user's three mower photographs, proposed uniform board and exact GreenSprout Hydroseeding logo as references. The orange deck is a grooming/finish mower attached to a tractor's rear three-point hitch and PTO, intended for maintained turf; it is not a ride-on collecting mower, flail mulcher or brush cutter. The staff clothing is a **proposed uniform visualization**. AI-generated embroidery is approximate at photographic scale; the original `public/brand/greensprout-logo.png` is the master for any actual uniform production.
+
+The paired before/after scenes are labelled *illustrative* on the pages and are not presented as evidence of completed GreenSprout projects. The embedded third-party videos are credited on-page and linked to their creators: K.A.T.'s finishing-mower demonstration (https://www.youtube.com/watch?v=T1BEsBs5kZo) and Lowe's sod installation guide (https://www.youtube.com/watch?v=t9GHY-gQFho). They are educational examples, not GreenSprout footage or owned equipment.
