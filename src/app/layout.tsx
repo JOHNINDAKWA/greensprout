@@ -36,7 +36,7 @@ const organization = {
 
 export const viewport: Viewport = {
   colorScheme: "light",
-  themeColor: "#193b2e",
+  themeColor: "#175329",
 };
 
 export default function RootLayout({
